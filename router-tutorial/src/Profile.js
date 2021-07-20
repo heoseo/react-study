@@ -13,7 +13,7 @@ const profileData = {
 };
 
 const Profile = ({ match }) => {
-  console.log("match", match);
+  console.log("Profile match", match);
   /*
   isExact: true
   params: {username: "gildong"}
