@@ -74,15 +74,15 @@ function reducer(state = initialState, action) {
 /* 스토어 만들기 */
 const store = createStore(reducer);
 
-console.log(store.getState()); // 현재 store 안에 들어있는 상태를 조회
+console.log("exercise store", store.getState()); // 현재 store 안에 들어있는 상태를 조회
 
 // 스토어 안에 들어있는 상태가 바뀔 때 마다 호출되는 listener함수
-const asdf = () => {
+const listener = () => {
   const state = store.getState();
-  console.log("execise listener", state);
+  console.log("exercise listener", state);
 };
 
-const unsubscribe = store.subscribe(asdf);
+// const unsubscribe = store.subscribe(listener);
 // 구독 해제는 unsubscribe()를 호출
 
 // 액션들을 디스패치함
