@@ -6,10 +6,10 @@ import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
 import rootReducer from "./modules/index";
 import { Provider } from "react-redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+// import { composeWithDevTools } from "redux-devtools-extension";
 // import "./exercise";
 
-const store = createStore(rootReducer, composeWithDevTools);
+const store = createStore(rootReducer);
 console.log("index store", store.getState());
 
 ReactDOM.render(

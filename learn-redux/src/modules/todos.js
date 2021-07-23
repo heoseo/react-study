@@ -7,7 +7,7 @@ let nextId = 1;
 export const addTodo = (text) => ({
   type: ADD_TODO,
   todo: {
-    id: nextId++,
+    id: ++nextId,
     text,
   },
 });
@@ -31,6 +31,7 @@ const initialState = [
 export default function todos(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
+      console.log("add", action.todo.id);
       return state.concat(action.todo);
     case TOGGLE_TODO:
       return state.map((todo) =>
