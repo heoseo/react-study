@@ -9,6 +9,7 @@ import rootReducer from "./modules";
 // import myLogger from "./middlewares/myLogger";
 import logger from "redux-logger";
 import { composeWithDevTools } from "redux-devtools-extension";
+import ReduxThunk from "redux-thunk";
 
 const store = createStore(
   rootReducer,
@@ -16,7 +17,8 @@ const store = createStore(
   //   // myLogger,
   //   logger
   // ),
-  composeWithDevTools(applyMiddleware(logger))
+  composeWithDevTools(applyMiddleware(ReduxThunk, logger))
+  // logger가 마지막에 와야 함.
 );
 
 ReactDOM.render(
