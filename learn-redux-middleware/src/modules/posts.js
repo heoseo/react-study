@@ -19,7 +19,7 @@ const GET_POST_ERROR = "GET_POST_ERROR";
 
 // thunk함수를 만들 수 있게 됨
 export const getPosts = createPromiseThunk(GET_POSTS, postsAPI.getPosts);
-export const getPOst = createPromiseThunk(GET_POST, postsAPI.getPostById);
+export const getPost = createPromiseThunk(GET_POST, postsAPI.getPostById);
 
 const initialState = {
   posts: reducerUtils.initial(),
