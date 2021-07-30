@@ -9,7 +9,9 @@ function App() {
   return (
     <>
       <CounterContainer />
+      <hr />
       <PostListContainer />
+      <hr />
       <Route path="/" component={PostListPage} exact={true} />
       <Route path="/:id" component={PostPage} />
     </>
